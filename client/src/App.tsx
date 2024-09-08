@@ -1,13 +1,16 @@
 import { Header } from "./components";
-import Home from "./pages/home";
+import Home from "./pages/Home";
+import { ThemeProvider } from "./context/ThemeContext";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <main>
-      <Header />
-      <Home />
-    </main>
+    <ThemeProvider>
+      <main>
+        <Header />
+        <Home />
+      </main>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

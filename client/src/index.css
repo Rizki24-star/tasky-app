@@ -13,11 +13,30 @@ form {
 }
 
 main {
+  position: relative;
+  /* background-color: rgba(0, 0, 0, 0.5); */
   max-width: 800px;
-  border: 1px solid #000000;
-  height: 100vh !important;
-  background-color: white !important;
+  background-color: white;
   border-radius: 10px;
+  min-height: 100vh; /* Menjaga tinggi minimum agar sesuai dengan viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+main::not(.more) {
+  overflow: hidden;
+}
+
+.add-task {
+  background-color: rgba(248, 249, 249, 0.7);
+}
+
+.theme-blue {
+  background-color: #3498db;
+}
+
+.home-theme-blue {
+  background-color: #85c1e9;
 }
 
 /* Desktop (min-width: 1024px) */
